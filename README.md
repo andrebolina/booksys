@@ -2,7 +2,10 @@
   <summary><b>Assista o vídeo de apresentação</b></summary>
 <br>
 <p align="center">
-<a href="https://www.youtube.com/watch?v=Tmp-Yv5Xm20"><img src="https://img.youtube.com/vi/Tmp-Yv5Xm20/0.jpg"></a>
+<a href="https://www.youtube.com/watch?v=Tmp-Yv5Xm20" target="_blank"><img src="https://img.youtube.com/vi/Tmp-Yv5Xm20/0.jpg"></a>
+</p>
+<p align="center">
+<a href="https://www.youtube.com/watch?v=Tmp-Yv5Xm20" target="_blank">https://www.youtube.com/watch?v=Tmp-Yv5Xm20</a>
 </p>
 </details>
 
@@ -47,3 +50,4 @@ A aplicação foi desenvolvida para o cenário descrito, atendendo todos os requ
 - [x] Utilização de plugin jQuery para avisos temporários ao serem realizadas ações
 - [x] Cor do registros na listagem principal de acordo com o estoque do livro (legendas na interface)
 - [x] Sistema responsivo
+- [x] Vídeo de apresentação do resultado
