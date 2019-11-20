@@ -1,0 +1,94 @@
+﻿/*----------------------------------------------------
+ Estilização do header da página
+------------------------------------------------------*/
+.body-content {
+    margin-top: 80px;
+}
+
+.navbar-brand {
+    height: auto;
+}
+
+.navbar-brand img {
+    height: 30px;
+}
+
+/*----------------------------------------------------
+ Estilização do footer da página
+------------------------------------------------------*/
+footer p {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    font-style: italic;
+}
+
+footer .bolina {
+    height: 25px;
+    vertical-align: baseline;
+    top: 2px;
+    position: relative;
+    margin: 0 2px;
+}
+
+footer .hbsis {
+    height: 20px;
+    vertical-align: bottom;
+    margin-left: 1px;
+}
+
+/*----------------------------------------------------
+ Estilização dos elementos da view Index
+------------------------------------------------------*/
+#index .table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+#index .legendas p {
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+#index .legendas > p {
+    margin-right: 15px;
+}
+
+#index .legendas .cor {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+#index .legendas .cor.baixo {
+    background-color: #faf2cc;
+}
+
+#index .legendas .cor.zero {
+    background-color: #ebcccc;
+}
+
+/*----------------------------------------------------
+ Estilização dos elementos de formulário com
+ classe form-padrao (Cadastrar / Editar)
+------------------------------------------------------*/
+.form-padrao {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.form-padrao .input-group {
+    width: 100%;
+}
+
+.form-padrao .input-group-addon {
+    width: 45px;
+}
+
+.form-padrao .field-validation-error {
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}

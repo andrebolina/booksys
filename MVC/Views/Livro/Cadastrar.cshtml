@@ -1,0 +1,93 @@
+﻿@model MVC.Models.LivrosModeloMVC
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-padrao">
+                <!--
+                    #Documentação
+                    Botão de voltar/cancelar, que envia a view Index
+                -->
+                <a href="@Url.Action("Index","Livro")" class="btn btn-default"><i class="fa fa-chevron-left"></i> Voltar</a>
+                <br /><br />
+                @using (Html.BeginForm())
+                {
+                    <fieldset>
+                        <legend>Cadastrar livro</legend>
+                        @Html.HiddenFor(model => model.id)
+                        <!--
+                            #Documentação
+                            Criação dos inputs para cada atributo do modelo, utilizando bootstrap
+                            para estilizar com um ícone a cada input e adicionando classe 'form-control' do bootstrap,
+                            placeholder e em alguns inputs clases para plugins jQuery e limite de caracteres
+                        -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-book"></i></div>
+                                @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nome do livro", @maxlength = "100" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.nome)
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                @Html.EditorFor(model => model.autor, new { htmlAttributes = new { @class = "form-control", @placeholder = "Autor do livro", @maxlength = "50" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.autor)
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-copyright"></i></div>
+                                @Html.EditorFor(model => model.editora, new { htmlAttributes = new { @class = "form-control", @placeholder = "Editora", @maxlength = "30" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.editora)
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                @Html.EditorFor(model => model.ano, new { htmlAttributes = new { @class = "form-control yearpicker", @placeholder = "Ano" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.ano)
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-shopping-cart"></i></div>
+                                @Html.EditorFor(model => model.estoque, new { htmlAttributes = new { @class = "form-control", @placeholder = "Estoque" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.estoque)
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">R$</div>
+                                @Html.EditorFor(model => model.valor, new { htmlAttributes = new { @class = "form-control valor", @placeholder = "Valor" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.valor)
+                        </div>
+                        <div class="form-group text-right">
+                            <!--
+                                #Documentação
+                                Botão de submissão
+                            -->
+                            <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Cadastrar</button>
+                        </div>
+                    </fieldset>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval");
+    <script>
+        /*
+            #Documentação
+            Inicialização dos plugins 'yearpicker' para input de Ano e 'maskMoney' para input do valor
+        */
+        $('.yearpicker').yearpicker();
+        $(".valor").maskMoney({ prefix: "", decimal: ",", thousands: "" });
+    </script>
+}

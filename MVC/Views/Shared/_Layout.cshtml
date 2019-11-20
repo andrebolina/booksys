@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booksys | @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!--
+        #Documentação
+        Adicionado CSS para personalização, CSS de plugin utilizado com jQuery e Font Awesome para uso de ícones
+    -->
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/yearpicker.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!--
+                #Documentação
+                Logo da aplicação
+            -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index","Livro")"><img src="~/Content/images/booksys.png" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <!--
+            #Documentação
+            Rodapé estilizado com informações do projeto e links externos aos envolvidos
+        -->
+        <footer>
+            <p>Desenvolvido por <a href="https://www.bolina.com.br" target="_blank"><img src="~/Content/images/bolina.png" class="bolina" /></a> para o processo seletivo <a href="https://hbsis.com.br/" target="_blank"><img src="~/Content/images/hbsis.png" class="hbsis" /></a></p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <!--
+        #Documentação
+        Adicionado plugin jQuery para animação de alertas do Bootstrap, para seleção de data/ano e para formatação do input de valor
+    -->
+    <script src="~/Scripts/jquery.inflop.bootstrap.alert.min.js"></script>
+    <script src="~/Scripts/yearpicker.js"></script>
+    <script src="~/Scripts/jquery.maskMoney.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

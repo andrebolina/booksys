@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BooksysBDModelStoreContainer" CdmEntityContainer="ModeloBD">
+    <EntitySetMapping Name="Livros">
+      <EntityTypeMapping TypeName="BooksysBDModel.Livro">
+        <MappingFragment StoreEntitySet="Livros">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="editora" ColumnName="editora" />
+          <ScalarProperty Name="ano" ColumnName="ano" />
+          <ScalarProperty Name="estoque" ColumnName="estoque" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

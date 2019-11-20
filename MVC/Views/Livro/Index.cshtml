@@ -1,0 +1,143 @@
+﻿@model IEnumerable<MVC.Models.LivrosModeloMVC>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div id="index" class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!--
+                #Documentação
+                DIV para mensagens de retorno após operações
+            -->
+            <div id="mensagem"></div>
+
+            <a href="@Url.Action("Cadastrar","Livro")" class="btn btn-success"><i class="fa fa-plus"></i> Novo livro</a>
+            <br /><br />
+            <!--
+                #Documentação
+                Tabela com classe responsiva do bootstrap
+            -->
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="table-heading">
+                        <tr>
+                            <th style="width: 100%">
+                                Nome
+                            </th>
+                            <th>
+                                Autor
+                            </th>
+                            <th>
+                                Editora
+                            </th>
+                            <th>
+                                Ano
+                            </th>
+                            <th>
+                                Estoque
+                            </th>
+                            <th>
+                                Preço
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    @foreach (var item in Model)
+                    {
+                        <!--
+                            #Documentação
+                            A linha tem sua cor alterada de acordo com o estoque
+                        -->
+                        <tr class="@(item.estoque == 0 ? "danger" : item.estoque < 10 ? "warning" : "" )">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.nome)
+                            </td>
+                            <td nowrap>
+                                @Html.DisplayFor(modelItem => item.autor)
+                            </td>
+                            <td nowrap>
+                                @Html.DisplayFor(modelItem => item.editora)
+                            </td>
+                            <td nowrap>
+                                @Html.DisplayFor(modelItem => item.ano)
+                            </td>
+                            <td nowrap>
+                                @Html.DisplayFor(modelItem => item.estoque) Un.
+                            </td>
+                            <td nowrap>
+                                R$ @Html.DisplayFor(modelItem => item.valor)
+                            </td>
+                            <td nowrap>
+                                <a title="Editar" href="@Url.Action("Editar","Livro", new { id = item.id })" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                                <a title="Remover" onclick="Remover(@item.id)" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+
+            <div class="legendas text-center">
+                <div class="cor baixo"></div><p>Produto com menos de 10 unidades</p>
+                <div class="cor zero"></div><p>Produto sem estoque</p>
+            </div>
+
+            <!--
+                #Documentação
+                Modal para confirmação de remoção
+            -->
+            <div class="modal fade" id="modalRemover" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Deseja remover este livro?</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <a id="botaoRemover" href="#" class="btn btn-danger">Remover</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(function () {
+            /*
+              #Documentação
+              Função que exibe o alerta do Bootrstrap com auxílio do plugin jQuery de acordo com a ação executada
+            */
+            var status = '@TempData["Status"]';
+            var mensagem = '@TempData["Mensagem"]';
+            switch (status) {
+                case 'Cadastrado':
+                    $('#mensagem').showBootstrapAlertSuccess(mensagem, Bootstrap.ContentType.Text, true, 3000);
+                    break;
+                case 'Editado':
+                    $('#mensagem').showBootstrapAlertInfo(mensagem, Bootstrap.ContentType.Text, true, 3000);
+                    break;
+                case 'Excluido':
+                    $('#mensagem').showBootstrapAlertDanger(mensagem, Bootstrap.ContentType.Text, true, 3000);
+                    break;
+            }
+
+        });
+
+        /*
+            #Documentação
+            Função que altera o link de remoção de acordo com o ID do livro e chama o modal de confirmação
+        */
+        function Remover(id) {
+            $('#botaoRemover').attr("href", '@Url.Action("Delete", "Livro")/' + id);
+            $('#modalRemover').modal();
+        }
+    </script>
+}
