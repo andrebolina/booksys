@@ -51,3 +51,5 @@ A aplicação foi desenvolvida para o cenário descrito, atendendo todos os requ
 - [x] Cor do registros na listagem principal de acordo com o estoque do livro (legendas na interface)
 - [x] Sistema responsivo
 - [x] Vídeo de apresentação do resultado
+
+*Os trechos desenvolvidos de maior complexidade e impacto no código estão todos comentados e possuem '#Documentação' para facilitar a localização dos mesmos.*
