@@ -1,21 +1,10 @@
-<details>
-  <summary><b>Assista o vídeo de apresentação</b></summary>
-<br>
-<p align="center">
-<a href="https://www.youtube.com/watch?v=Tmp-Yv5Xm20" target="_blank"><img src="https://img.youtube.com/vi/Tmp-Yv5Xm20/0.jpg"></a>
-</p>
-<p align="center">
-<a href="https://www.youtube.com/watch?v=Tmp-Yv5Xm20" target="_blank">https://www.youtube.com/watch?v=Tmp-Yv5Xm20</a>
-</p>
-</details>
-
 ------------------
 
 <img align="left" width="45" height="45" src="https://raw.githubusercontent.com/andrebolina/booksys/master/MVC/favicon.ico">
 
 # Booksys
 
-### Aplicação desenvolvida por [André Bolina](https://www.bolina.com.br/) para teste técnico no processo seletivo da [HBSIS](https://hbsis.com.br/)
+### Aplicação desenvolvida por [André Bolina](https://www.bolina.com.br/)
 
 #### Cenário
 Uma livraria da cidade teve um aumento no número de seus exemplares e está com um problema para identificar todos os livros que possui em estoque. Para ajudar a livraria foi solicitado a você desenvolver uma aplicação web para gerenciar estes exemplares. 
