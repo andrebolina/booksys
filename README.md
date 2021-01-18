@@ -4,41 +4,40 @@
 
 # Booksys
 
-### Aplicação desenvolvida por [André Bolina](https://www.bolina.com.br/)
+### App developed by [André Bolina](https://www.bolina.com.br/)
 
-#### Cenário
-Uma livraria da cidade teve um aumento no número de seus exemplares e está com um problema para identificar todos os livros que possui em estoque. Para ajudar a livraria foi solicitado a você desenvolver uma aplicação web para gerenciar estes exemplares. 
+#### Scenario
+A bookstore in the city has seen an increase in the number of copies and has a problem identifying all the books it has in stock. To help the bookstore you were asked to develop a web application to manage these copies.
 
-#### Requisitos
-- [x] O sistema deverá mostrar todos os livros cadastrados ordenados de forma ascendente pelo nome
-- [x] O sistema deverá permitir cadastrar um livro
-- [x] O sistema deverá permitir editar um livro
-- [x] Os livros devem ser persistidos em um banco de dados
+#### Requirements
+- [x] The system should show all registered books ordered in ascending order by name
+- [x] The system should allow registering a book
+- [x] The system should allow editing of a book
+- [x] Books must be persisted in a database
 
-#### Outros Requisitos
-- [x] Para a persistência dos dados deve ser utilizado algum framework de ORM
+#### Other Requirements
+- [x] For data persistence some ORM framework must be used
 
-#### Diferenciais
-- [x] Utilizar web api para comunicação entre front e backend
-- [x] Utilizar framework frontend JQuery
-- [x] Utilizar framework frontend Bootstrap
+#### Differentials
+- [x] Use web api for communication between front and backend
+- [x] Use JQuery frontend framework
+- [x] Use Bootstrap frontend framework
 
-#### Observações
-- [x] O sistema deverá ser desenvolvido na plataforma .NET
-- [x] Pode utilizar ASP .Net MVC
-- [x] O código deve ser disponibilizado no Github
+#### Additional points
+- [x] The system must be developed on the .NET platform
+- [x] Can use ASP .Net MVC
+- [x] The code must be made available on Github
 
 ------------------
 
-#### Observações do candidato
-A aplicação foi desenvolvida para o cenário descrito, atendendo todos os requisitos, cumprindo todas as observações e ainda com alguns dos diferenciais listados no enunciado. Ressalto além disto os seguintes pontos realizados que vão além do enunciado:
-- [x] Criação de nome para solução
-- [x] Criação de identidade visual (logo) para a solução
-- [x] Utilização de plugin jQuery para selecionar o ano do livro
-- [x] Utilização de plugin jQuery para formatar o valor do livro
-- [x] Utilização de plugin jQuery para avisos temporários ao serem realizadas ações
-- [x] Cor do registros na listagem principal de acordo com o estoque do livro (legendas na interface)
-- [x] Sistema responsivo
-- [x] Vídeo de apresentação do resultado
+#### Notes
+The application was developed to the described scenario, having all the requirements, fulfilling all the differentials and additional points. I would also like to highlight the following points:
+- [x] Creation of name to solution
+- [x] Creation of visual identity (logo) for the solution
+- [x] Use of jQuery plugin to select the year of the book
+- [x] Use of jQuery plugin to format the book value
+- [x] Use of jQuery plugin for temporary messages when actions are performed
+- [x] Color of the records in the main listing according to the book's stock (captions in the interface)
+- [x] Responsive system
 
-*Os trechos desenvolvidos de maior complexidade e impacto no código estão todos comentados e possuem '#Documentação' para facilitar a localização dos mesmos.*
+*The developed sections with greater complexity and impact on the code are all commented (in portuguese) and have '#Comment' to facilitate their localization.*
